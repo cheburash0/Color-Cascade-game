@@ -1,0 +1,169 @@
+/* Обнулення стилів для елементів за замовчуванням */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основний фон сторінки з градієнтом */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер для всієї гри */
+.game-container {
+    width: 500px;
+    height: 800px;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Назва гри */
+.game-container h1 {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Головне поле гри */
+.game-field {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background: linear-gradient(to bottom, #0099CC, #00BFFF);
+}
+
+/* Канвас для рендерингу графіки */
+#gameCanvas {
+    display: block;
+}
+
+/* Контейнер для інформації про гру */
+.game-info {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Таблиця рекордів */
+.record-table {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.record-table h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.record-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.record-table th,
+.record-table td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.record-table th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Стилі для крапель */
+.droplet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+}
+
+/* Відокремлення стилів для крапель різних кольорів */
+.droplet.red {
+    background-color: red;
+}
+
+.droplet.blue {
+    background-color: blue;
+}
+
+.droplet.yellow {
+    background-color: yellow;
+}
+
+.droplet.gold {
+    background-color: gold;
+}
+
+.droplet.black {
+    background-color: black;
+}
+
+.droplet.rainbow {
+    background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: content-box;
+}
+
+/* Стилі для відрама */
+.bucket {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 10px 10px;
+    transition: left 0.2s ease;
+}
+
+/* Відокремлення стилів для відрами різних кольорів */
+.bucket.white {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 100 50"><path d="M0 50h100L50 0z"/></svg>');
+}
+
+.game-info {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+#pause-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#pause-button:hover {
+    background-color: #0056b3;
+}
